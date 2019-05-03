@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <base target="_blank">
+
+    <title>Peer connection: audio only</title>
+
+    <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/main2.css"/>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1> <span>Peer connection: audio only</span></h1>
+
+    <div id="audio">
+        <div>
+            <div class="label">Local audio:</div>
+            <audio id="audio1" autoplay controls muted></audio>
+        </div>
+        <div>
+            <div class="label">Remote audio:</div>
+            <audio id="audio2" autoplay controls></audio>
+        </div>
+    </div>
+
+    <div id="buttons">
+        <select id="codec">
+            <option value="opus">Opus</option>
+            <option value="ISAC">iSAC 16K</option>
+            <option value="G722">G722</option>
+            <option value="PCMU">PCMU</option>
+        </select>
+        <button id="callButton">Call</button>
+        <button id="hangupButton">Hang Up</button>
+    </div>
+    <div class="graph-container" id="bitrateGraph">
+        <div>Bitrate</div>
+        <canvas id="bitrateCanvas"></canvas>
+    </div>
+    <div class="graph-container" id="packetGraph">
+        <div>Packets sent per second</div>
+        <canvas id="packetCanvas"></canvas>
+    </div>
+
+</div>
+
+<script src="js/adapter-latest.js"></script>
+<script src="js/main.js"></script>
+<script src="js/graph.js"></script>
+
+<script src="js/lib/ga.js"></script>
+</body>
+</html>
