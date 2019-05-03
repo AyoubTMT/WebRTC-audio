@@ -101,8 +101,9 @@ function handleLogin(success) {
          stream = myStream; 
 			
          //displaying local audio stream on the page 
-         localAudio.src = window.URL.createObjectURL(stream);
-			
+         //localAudio.src = window.URL.createObjectURL(stream);
+         localAudio.srcObject=stream;	
+         
          //using Google public stun server 
          var configuration = { 
             "iceServers": [{ "url": "stun:stun2.1.google.com:19302" }] 
