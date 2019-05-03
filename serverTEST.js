@@ -136,7 +136,7 @@ wss.on('connection', function(connection) {
         } 
     });
 
-    connection.send("Hello from server"); 
+    //connection.send("Hello from server"); 
 });
 
 function sendTo(connection, message) { 
