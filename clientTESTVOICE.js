@@ -116,7 +116,8 @@ function handleLogin(success) {
 			
          //when a remote user adds stream to the peer connection, we display it 
          yourConn.onaddstream = function (e) { 
-            remoteAudio.src = window.URL.createObjectURL(e.stream); 
+            //remoteAudio.src = window.URL.createObjectURL(e.stream); 
+            remoteAudio.srcObject=e.stream;	
          }; 
 			
          // Setup ice handling 
