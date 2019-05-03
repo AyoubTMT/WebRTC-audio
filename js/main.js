@@ -63,6 +63,7 @@ function call() {
   pc1 = new RTCPeerConnection(servers);
   console.log('Created local peer connection object pc1');
   pc1.onicecandidate = e => onIceCandidate(pc1, e);
+  pc1.ontrack = gotRemoteStream;
   pc2 = new RTCPeerConnection(servers);
   console.log('Created remote peer connection object pc2');
   pc2.onicecandidate = e => onIceCandidate(pc2, e);

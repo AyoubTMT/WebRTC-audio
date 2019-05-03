@@ -13,8 +13,8 @@ audio {
 }
 
 button {
-  margin: 0 20px 0 0;
-  width: 96px;
+  margin: 0 20px 10px 0;
+  min-width: 96px;
 }
 
 table {
